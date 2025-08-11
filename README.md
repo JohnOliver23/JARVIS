@@ -28,25 +28,30 @@ Sistema de gerenciamento de visitantes da Stark Tower desenvolvido com Next.js, 
 
 ## 🚀 Instalação e Configuração
 
-### 1. Clone o repositório
+```bash
+# Clone o Repositório
+$ https://github.com/JohnOliver23/JARVIS.git
+```
 
-\`\`\`
-git clone <url-do-repositorio>
-cd jarvis-visitor-management
-\`\`\`
+```bash
+# Acesse a pasta do projeto
+$ cd jarvis-visitor-management
+```
 
-### 2. Instale as dependências
+```bash
+# Baixe as dependências
+$ npm i
+```
 
-\`\`\`
-npm install
-\`\`\`
+```bash
+# Execute
+$ npm run dev
+```
 
-### 3. Execute o projeto
-
-\`\`\`
-npm run dev
-\`\`\`
-Acesse: `http://localhost:3000`
+```bash
+# Acesse
+$ `http://localhost:3000`
+```
 
 ## 📱 Como Usar
 
@@ -65,21 +70,6 @@ Acesse: `http://localhost:3000`
 
 ## 🔧 Arquitetura
 
-### **Estrutura de Pastas:**
-
-\`\`\`
-├── app/ # Next.js App Router
-├── components/
-│ ├── layout/ # Header e Sidebar
-│ ├── dashboard/ # Componentes do dashboard
-│ └── ui/ # Componentes base (shadcn/ui)
-├── hooks/ # Custom hooks
-├── services/ # Integração com Supabase
-├── types/ # TypeScript types
-├── constants/ # Constantes e configurações
-└── lib/ # Utilitários e configurações
-\`\`\`
-
 ### **Custom Hooks:**
 
 - `useSidebar`: Lógica do sidebar e navegação
@@ -87,14 +77,6 @@ Acesse: `http://localhost:3000`
 - `useActivityLogs`: Gerenciamento de logs
 - `useSupabase*Query`: Integração com dados do Supabase
 
-## 🔧 Troubleshooting
-
-### Erro de Dependências
-
-\`\`\`
-rm -rf node_modules package-lock.json
-npm install
-\`\`\`
 
 ### Dados não aparecem
 
@@ -104,16 +86,7 @@ npm install
 
 ## 🚀 Deploy
 
-### Vercel (Recomendado)
-
-1. Conecte seu repositório no Vercel
-2. Deploy automático
-
-### Outras Plataformas
-
-- Netlify
-- Railway
-- Render
+### Vercel `jarvis-ten-ochre.vercel.app`
 
 ## 📊 Funcionalidades Implementadas
 
@@ -126,15 +99,6 @@ npm install
 - [x] Logs de atividade do sistema
 - [x] Integração completa com Supabase
 - [x] Tema escuro com estilo JARVIS
-
-### 🚧 **Próximas Versões**
-
-- [ ] Formulário de cadastro de visitantes
-- [ ] Tabela de visitantes ativos
-- [ ] Histórico completo de visitantes
-- [ ] Gerenciamento de salas
-- [ ] Sistema de autenticação
-- [ ] Relatórios e exportação
 
 ## 🎯 **Base de Dados**
 
