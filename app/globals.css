@@ -1,0 +1,258 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer components {
+  .jarvis-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .stark-glow {
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+  }
+
+  /* Melhorias para bordas no modo escuro */
+  .dark .jarvis-card {
+    @apply border-gray-800/50 bg-gray-900/50 backdrop-blur-sm;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .dark .jarvis-card:hover {
+    @apply border-gray-700/60 bg-gray-900/70;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  }
+
+  .dark .jarvis-card-inner {
+    @apply border-gray-700/40 bg-gray-800/30;
+  }
+
+  .dark .jarvis-card-inner:hover {
+    @apply border-gray-600/50 bg-gray-800/50;
+  }
+
+  /* Glow sutil para cards importantes */
+  .dark .jarvis-card-glow {
+    @apply border-blue-900/30;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(59, 130, 246, 0.1), 0 0
+      20px rgba(59, 130, 246, 0.05);
+  }
+
+  .dark .jarvis-card-glow:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(59, 130, 246, 0.2),
+      0 0 25px rgba(59, 130, 246, 0.1);
+  }
+
+  /* Sidebar melhorado para modo escuro */
+  .dark .jarvis-sidebar {
+    @apply bg-gray-950/80 backdrop-blur-xl;
+    border-right: 1px solid rgba(55, 65, 81, 0.3);
+    box-shadow: 4px 0 24px -2px rgba(0, 0, 0, 0.3);
+  }
+
+  .light .jarvis-sidebar {
+    @apply bg-white/80 backdrop-blur-xl;
+    border-right: 1px solid rgba(229, 231, 235, 0.8);
+    box-shadow: 4px 0 24px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Header melhorado para modo escuro */
+  .dark .jarvis-header {
+    @apply bg-gray-950/80 backdrop-blur-xl;
+    border-bottom: 1px solid rgba(55, 65, 81, 0.3);
+    box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.3);
+  }
+
+  .light .jarvis-header {
+    @apply bg-white/80 backdrop-blur-xl;
+    border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+    box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Botões do sidebar com hover melhorado */
+  .dark .jarvis-sidebar-button {
+    @apply hover:bg-gray-800/50 hover:border-gray-700/30;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .dark .jarvis-sidebar-button.active {
+    @apply bg-blue-950/30 border-blue-800/30 text-blue-300;
+    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.1), 0 0 20px rgba(59, 130, 246, 0.05);
+  }
+
+  .light .jarvis-sidebar-button {
+    @apply hover:bg-gray-100/80;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .light .jarvis-sidebar-button.active {
+    @apply bg-blue-50 border-blue-200 text-blue-700;
+  }
+
+  /* Melhorias para inputs e selects */
+  .dark input.jarvis-card-inner,
+  .dark .jarvis-card-inner input {
+    @apply bg-gray-800/40 border-gray-700/50 focus:border-blue-500/50 focus:ring-blue-500/20;
+  }
+
+  .dark select.jarvis-card-inner,
+  .dark .jarvis-card-inner select {
+    @apply bg-gray-800/40 border-gray-700/50;
+  }
+
+  /* Melhorias para tabelas */
+  .dark table {
+    @apply border-gray-800/30;
+  }
+
+  .dark th {
+    @apply border-gray-800/40 bg-gray-900/30;
+  }
+
+  .dark td {
+    @apply border-gray-800/30;
+  }
+
+  .dark tr:hover {
+    @apply bg-gray-800/20;
+  }
+
+  /* Bordas gradientes sutis */
+  .dark .jarvis-gradient-border {
+    position: relative;
+    background: hsl(var(--card));
+    border: none;
+  }
+
+  .dark .jarvis-gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2), transparent);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+  }
+
+  .loading-dots {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+
+  .loading-dots div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #667eea;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+
+  .loading-dots div:nth-child(1) {
+    left: 8px;
+    animation: loading-dots1 0.6s infinite;
+  }
+
+  .loading-dots div:nth-child(2) {
+    left: 8px;
+    animation: loading-dots2 0.6s infinite;
+  }
+
+  .loading-dots div:nth-child(3) {
+    left: 32px;
+    animation: loading-dots2 0.6s infinite;
+  }
+
+  .loading-dots div:nth-child(4) {
+    left: 56px;
+    animation: loading-dots3 0.6s infinite;
+  }
+
+  @keyframes loading-dots1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes loading-dots3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+
+  @keyframes loading-dots2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+}
