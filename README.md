@@ -24,52 +24,28 @@ Sistema de gerenciamento de visitantes da Stark Tower desenvolvido com Next.js, 
 ## 📋 Pré-requisitos
 
 - Node.js 18+ instalado
-- Conta no Supabase
 - Git
 
 ## 🚀 Instalação e Configuração
 
 ### 1. Clone o repositório
 
-\`\`\`bash
+\`\`\`
 git clone <url-do-repositorio>
 cd jarvis-visitor-management
 \`\`\`
 
 ### 2. Instale as dependências
 
-\`\`\`bash
+\`\`\`
 npm install
 \`\`\`
 
-### 3. Configure o Supabase
+### 3. Execute o projeto
 
-1. Acesse [supabase.com](https://supabase.com) e crie um projeto
-2. Vá em **Settings > API** e copie:
-   - Project URL
-   - anon public key
-   - service_role key (opcional, para funcionalidades avançadas)
-
-### 4. Configure as variáveis de ambiente
-
-1. Copie o arquivo de exemplo:
-   \`\`\`bash
-   cp .env.example .env.local
-   \`\`\`
-
-2. Edite `.env.local` com suas chaves do Supabase:
-   \`\`\`env
-   NEXT_PUBLIC_SUPABASE_URL=https://seu-projeto.supabase.co
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=sua_chave_anon_aqui
-   SUPABASE_SERVICE_ROLE_KEY=sua_chave_service_role_aqui
-   \`\`\`
-
-### 5. Execute o projeto
-
-\`\`\`bash
+\`\`\`
 npm run dev
 \`\`\`
-
 Acesse: `http://localhost:3000`
 
 ## 📱 Como Usar
@@ -93,7 +69,7 @@ Acesse: `http://localhost:3000`
 
 \`\`\`
 ├── app/ # Next.js App Router
-├── components/  
+├── components/
 │ ├── layout/ # Header e Sidebar
 │ ├── dashboard/ # Componentes do dashboard
 │ └── ui/ # Componentes base (shadcn/ui)
@@ -113,16 +89,9 @@ Acesse: `http://localhost:3000`
 
 ## 🔧 Troubleshooting
 
-### Erro de Conexão com Supabase
-
-- ✅ Verifique se as variáveis de ambiente estão corretas
-- ✅ Confirme se o projeto Supabase está ativo
-- ✅ Teste a conexão no painel do Supabase
-- ✅ Verifique o status de conexão no sidebar da aplicação
-
 ### Erro de Dependências
 
-\`\`\`bash
+\`\`\`
 rm -rf node_modules package-lock.json
 npm install
 \`\`\`
@@ -138,11 +107,7 @@ npm install
 ### Vercel (Recomendado)
 
 1. Conecte seu repositório no Vercel
-2. Configure as variáveis de ambiente:
-   - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-   - `SUPABASE_SERVICE_ROLE_KEY` (opcional)
-3. Deploy automático
+2. Deploy automático
 
 ### Outras Plataformas
 
